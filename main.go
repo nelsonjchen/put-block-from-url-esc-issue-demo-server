@@ -8,11 +8,22 @@ import (
 
 func main() {
 
-	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/red%2Fblue.txt", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain")
 		w.WriteHeader(http.StatusOK)
 
-		_, err := io.WriteString(w, "Hello world\n")
+		_, err := io.WriteString(w, "Need %25 in URL!\n")
+		if err != nil {
+			log.Fatalf("Could not write: %s\n", err.Error())
+
+		}
+	})
+
+	http.HandleFunc("/red/blue.txt", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/plain")
+		w.WriteHeader(http.StatusOK)
+
+		_, err := io.WriteString(w, "no!\n")
 		if err != nil {
 			log.Fatalf("Could not write: %s\n", err.Error())
 
