@@ -1,4 +1,4 @@
-# Azure Storage Copy from URL Escaping Issue Demo/Debug
+# Azure Storage Put Block from URL Escaping Issue Demo/Debug
 
 This test server tool was made to demonstrate and record that Azure Storage's
 "Put Block From URL" erroneously escapes the path before requesting it from the remote server. The URL "
