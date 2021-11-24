@@ -30,6 +30,15 @@ func main() {
 			return
 		}
 
+		if req.URL.EscapedPath() == "/normal.txt" {
+			w.WriteHeader(200)
+			_, err := fmt.Fprintf(w, "Normal file path!")
+			if err != nil {
+				return
+			}
+			return
+		}
+
 		_, err := fmt.Fprintf(w, "Debug: Escaped Path Recieved\n%#v\n%#v", req.URL, req.URL.EscapedPath())
 		if err != nil {
 			return
