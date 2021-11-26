@@ -1,5 +1,7 @@
 # Azure Storage Put Block from URL Escaping Issue Demo/Debug
 
+Question on Azure Q&A: https://docs.microsoft.com/en-us/answers/questions/641723/i-can39t-get-azure-storage-to-support-putting-data.html
+
 Client Counterpart: https://github.com/nelsonjchen/PutBlockFromUrlEscIssueDemoClient
 
 # Usage
