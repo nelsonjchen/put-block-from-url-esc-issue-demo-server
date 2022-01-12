@@ -10,7 +10,7 @@ Build the Dockerfile or Go program and host it somewhere public.
 
 Edit the URL in the Client Counterpart to point to the public host.
 
-Run the client and it will throw an exception as Azure Storage escapes a necessary "`%2F`" in the URL. 
+Run the client and it will throw an exception as Azure Storage unescapes a necessary "`%2F`" in the URL. 
 
 # Demo Host
 
